@@ -1,1 +1,54 @@
-hello
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+    <div id="container"></div>
+    <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.2.min.js"></script>
+    <script defer="defer">
+
+      var x = window.innerWidth;
+      var y = window.innerHeight;
+      var opacityVar =.8;
+      var stage = new Kinetic.Stage({
+        container: 'container',
+        width: x,
+        height: y-100,
+        x: 0,
+        y:0
+      });
+      var layer = new Kinetic.Layer();
+
+      var imageObj = new Image();
+      imageObj.onload = function() {
+        var murmur = new Kinetic.Image({
+          x: (x-851)/2,
+          y: (y-350)/2,
+          image: imageObj,
+          width: 851,
+          height: 350,
+          opacity: opacityVar
+        });
+
+        murmur.on('mouseover', function() {
+        this.opacity(1);
+        layer.draw();
+        });
+
+      murmur.on('mouseout', function() {
+        this.opacity(opacityVar);
+        layer.draw();
+      });
+        // add the shape to the layer
+        layer.add(murmur);
+
+        // add the layer to the stage
+        stage.add(layer);
+      };
+      imageObj.src = 'Mm.jpg';
+
+    </script>
+    <p><center>click to enter site</center></p>
+  </body>
+</html>
