@@ -1,29 +1,12 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-      <div class="row">
-        <div class="large-12 columns">
-        <!--<h3><center>Artists<center></h3>-->
-      </div>
-    </div>
-      <ul id="nav">
-      <li><a href="artists.html">Artists</a></li>
-      <li><a href="releases.html">Releases</a></li>
-      <li><a href="cyphers.html">Cyphers</a></li>
-      <li><a href="https://soundcloud.com/murmurscollective">Soundcloud</a></li>
-      <li><a href="http://murmurscollective.bandcamp.com/">Bandcamp</a></li>
-      <li><a href="https://www.facebook.com/ahushfell?fref=ts">Facebook</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-</head>
-  <body>
-    <div id="container"></div>
-    <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.2.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+---
+layout: default 
+title: artists
+---
+  <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <script src="lib/jquery-loadTemplate/jquery.loadTemplate-1.4.1.min.js"></script>
-    <script defer="defer">
+  <script defer="defer">
 
     artistNames= [
     'Methuselah',
@@ -94,36 +77,23 @@
     'Kez.jpg'
     ];
 
+    window.onload=function(){
 
-
-      window.onload=function(){
-
-      var x = window.innerWidth;
-      var y = window.innerHeight;
-      var picx=180;
-      var picy=180;
+    var x = window.innerWidth;
+    var y = window.innerHeight;
+    var picx=180;
+    var picy=180;
       
-      for(var artistid in artistNames){
-        //$('#myTable').find('tbody').append($('<tr>').append($('<td>').append($('<img>')
-          //      .attr('src', artistPics[artistid]).text(artistNames[artistid]))));
-        //$('#names').text(artistNames[artistid]);
-        $('#container').append('<a href=\"'+artistSites[artistid]+'\"><img id=\"'+ artistNames[artistid] +'\" alt=\"'+artistNames[artistid]+'\" src=\"'+ 'artistimgs/' + artistPics[artistid]+'\" height=\"'+picy +'\" width=\"'+picx+'\" class="grayscale" />');
+    for(var artistid in artistNames){
+      //$('#myTable').find('tbody').append($('<tr>').append($('<td>').append($('<img>')
+        //      .attr('src', artistPics[artistid]).text(artistNames[artistid]))));
+      //$('#names').text(artistNames[artistid]);
+      $('#container').append('<a href=\"'+artistSites[artistid]+'\"><img id=\"'+ artistNames[artistid] +'\" alt=\"'+artistNames[artistid]+'\" src=\"'+ 'artistimgs/' + artistPics[artistid]+'\" height=\"'+picy +'\" width=\"'+picx+'\" class="grayscale" />');
       }
     }
     
     </script>
-    <!--<p><center>click to enter site</center></p>-->
-    
-    <table id="myTable">
-      <tbody>
-      </tbody>
-    </table>
+<div id="artists">
+    <div id="container"></div>
+</div>    
     <div id ="names"></div>
-
-
-    <div class="container">
-
-    </div>
-   
-  </body>
-</html>
