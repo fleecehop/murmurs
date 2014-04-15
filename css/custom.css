@@ -55,6 +55,11 @@ img.grayscale:hover {
   color: #c00;
   background-color: #fff;
 }
+
+#navcontainer {
+  width:100%;
+  padding-bottom: 2em;
+}
 /* End navigation bar styling. */
 
 #container a img {
