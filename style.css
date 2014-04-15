@@ -4,6 +4,7 @@ html, body {
   margin: 0px;
   margin: 0px;
   font-style:oblique;
+<<<<<<< HEAD
 }
 img.grayscale {
   /* Firefox 10+, Firefox on Android */
@@ -56,3 +57,6 @@ img.grayscale:hover {
       color: #c00;
       background-color: #fff; }
    /* End navigation bar styling. */
+=======
+}
+>>>>>>> 6195c205de3abbfbf20d16f195b9816f2aedb9f4
