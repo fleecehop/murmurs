@@ -1,0 +1,99 @@
+---
+layout: default 
+title: artists
+---
+  <script src="http://d3lp1msu2r81bx.cloudfront.net/kjs/js/lib/kinetic-v5.0.2.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="lib/jquery-loadTemplate/jquery.loadTemplate-1.4.1.min.js"></script>
+  <script defer="defer">
+
+    artistNames= [
+    'Methuselah',
+    'FAUX/BLU',
+    'T!BE',
+    'b00n',
+    'nocon',
+    'AndMyLoafers',
+    'EdEthics',
+    'delusion.',
+    'magoni',
+    'Naota',
+    'Eelahno',
+    'Manitee',
+    'fsn',
+    'GLiPH',
+    'Feels',
+    'fleece',
+    'terminoir',
+    'jPolo',
+    'Renja',
+    'Kez the Dude'
+    ];
+
+     artistSites= [
+    'https://soundcloud.com/meth420',
+    'https://soundcloud.com/fauxblu',
+    'https://soundcloud.com/ethan-barer',
+    'https://soundcloud.com/z05',
+    'https://soundcloud.com/nocondj',
+    'https://soundcloud.com/anddrew-eddward',
+    'https://soundcloud.com/edethics',
+    'https://soundcloud.com/itsdelusion',
+    'https://soundcloud.com/magoni',
+    'https://soundcloud.com/elm6',
+    'https://soundcloud.com/eelahno',
+    'https://soundcloud.com/robert-dingus',
+    'https://soundcloud.com/579',
+    'https://soundcloud.com/gliph',
+    'https://soundcloud.com/feels',
+    'https://soundcloud.com/fleece',
+    'https://soundcloud.com/terminoir',
+    'https://soundcloud.com/jpolobeats',
+    'https://soundcloud.com/amant9000',
+    'https://soundcloud.com/kez-the-dude-charles'
+    ];
+  
+    artistPics= [
+    'meth.jpg',
+    'fauxblu.jpg',
+    'tibe.jpg',
+    'b00n.jpg',
+    'nocon.jpg',
+    'andmyloafers.jpg',
+    'ed.jpg',
+    'delusion.jpg',
+    'magoni.jpg',
+    'naota.jpg',
+    'eelahno.jpg',
+    'dingus.jpg',
+    'fsn.jpg',
+    'gliph.jpg',
+    'feels.jpg',
+    'fleece.jpg',
+    'terminoir.jpg',
+    'jpolo.jpg',
+    'renja.jpg',
+    'Kez.jpg'
+    ];
+
+    window.onload=function(){
+
+    var x = window.innerWidth;
+    var y = window.innerHeight;
+    var picx=180;
+    var picy=180;
+      
+    for(var artistid in artistNames){
+      //$('#myTable').find('tbody').append($('<tr>').append($('<td>').append($('<img>')
+        //      .attr('src', artistPics[artistid]).text(artistNames[artistid]))));
+      //$('#names').text(artistNames[artistid]);
+      $('#container').append('<a href=\"'+artistSites[artistid]+'\"' + ' ' + 'title=\"' + artistNames[artistid] + '\"><img id=\"'+ artistNames[artistid] +'\" alt=\"'+artistNames[artistid]+'\" src=\"'+ 'artistimgs/' + artistPics[artistid]+'\" height=\"'+picy +'\" width=\"'+picx+'\" class="grayscale" />');
+      }
+    }
+    
+    </script>
+<div id="artists">
+    <div id="container"></div>
+</div>    
+    <div id ="names"></div>
