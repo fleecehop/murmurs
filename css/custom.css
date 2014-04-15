@@ -31,8 +31,7 @@ img.grayscale:hover {
 
 /* Begin Navigation Bar Styling */
 #nav {
-  width: 100%;
-  float: left;
+  width: 970px;
   margin: 0 auto;
   padding: 2em;
   list-style: none;
