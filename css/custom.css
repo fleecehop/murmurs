@@ -62,6 +62,13 @@ img.grayscale:hover {
 }
 /* End navigation bar styling. */
 
+/* container artists page max width for grid */
+
+#artists #container {
+  max-width: 970px;
+  margin: 0 auto;
+}
+
 #container a img {
   margin:0;
 }
